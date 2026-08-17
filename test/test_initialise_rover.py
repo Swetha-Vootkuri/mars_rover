@@ -1,11 +1,7 @@
 import unittest
-from enum import Enum
 
+from src.direction import Direction
 from src.rover import Rover
-
-
-class Direction(Enum):
-    NORTH = 1
 
 
 class InitialiseRoverTest(unittest.TestCase):
@@ -16,5 +12,5 @@ class InitialiseRoverTest(unittest.TestCase):
 
     def test_initialise_rover_heading(self):
         rover = Rover(2, 3, Direction.NORTH)
-        self.assertEqual(Direction.NORTH,rover.get_heading())
+        self.assertEqual(Direction.NORTH, rover.get_heading())
 
