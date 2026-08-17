@@ -16,6 +16,8 @@ class Rover:
     def receive_command(self, command):
         if self.get_heading() == Direction.NORTH:
             self.position_y += 1
+        elif self.get_heading() == Direction.EAST:
+            self.position_x += 1
         else:
-            self.position_x +=1
+            self.position_y -= 1
 
