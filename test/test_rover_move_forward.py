@@ -1,7 +1,6 @@
 import unittest
 
 from parameterized import parameterized
-import parametrize
 
 from src.direction import Direction
 from src.rover import Rover
