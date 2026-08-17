@@ -9,3 +9,6 @@ class Rover:
 
     def get_heading(self):
         return self.heading
+
+    def receive_command(self, command):
+        self.position_y += 1
