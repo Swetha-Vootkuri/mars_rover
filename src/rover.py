@@ -1,3 +1,6 @@
+from src.direction import Direction
+
+
 class Rover:
     def __init__(self, position_x, position_y, heading):
         self.heading = heading
@@ -11,4 +14,8 @@ class Rover:
         return self.heading
 
     def receive_command(self, command):
-        self.position_y += 1
+        if self.get_heading() == Direction.NORTH:
+            self.position_y += 1
+        else:
+            self.position_x +=1
+
